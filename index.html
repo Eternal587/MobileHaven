@@ -3,20 +3,26 @@
     <body>
         <center>
             <h1> Mobile Haven - Hub</h1>
-            <big>
                 <a href="https://discord.com/channels/@me">Discord</a>
                 <a href="https://poki.com">Poki</a>
                 <a href="https://youtube.com">Youtube</a>
                 <a href="google.com">Google</a>
                 <a href="https://open.spotify.com">Spotify</a>
                 <a href="https://github.com">Github</a>
-            </big>
+                <br>
+                <input id="OP"></input>
+                <button onclick="episode()">Refresh episode</button>
+                <a href="https://ww6.gogoanimes.org/watch/one-piece-dub-episode-1" id="episode">One Piece</a>
+                <br>
+                <a href="github.com/VibingCatt/MobileHaven/">Github Source</a>
         </center>
         <style>
             body {
                 background-color: black;
                 color: white;
                 text-emphasis-color: lightblue;
+                transform: scale(1.3); /* for Firefox, default 1*/
+    zoom:130%; /* For Chrome, IE, default 100%*/
             }
             .button {
                 border-radius: 4px;
@@ -25,11 +31,24 @@
         </style>
     </body>
     <script>
-        function discord() {
-            window.location.href = "https://discord.com/channels/@me";
+        /// Variables
+
+    let x = document.getElementById("OP").value;
+    let y = String("https://ww6.gogoanimes.org/watch/one-piece-dub-episode-" + x);
+
+        /// functions
+        function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+        function episode() {
+            let x = document.getElementById("OP").value;
+            let y = String("https://ww6.gogoanimes.org/watch/one-piece-dub-episode-" + x);
+            let z = document.getElementById('episode')
+            z.setAttribute("href", y);
         }
-        function poki()   {
-            window.location.herf = "https://poki.com"
-        }
+
+
+
     </script>
 </html>
