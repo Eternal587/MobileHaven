@@ -6,13 +6,14 @@
             <h1>MobileHaven</h1>
                     <input type="text" id="Website" class="wwb"></input> <br>
                     <button class="wwb" onclick="openwebsite()">Open Website</button> <br>
+
+                    <div class="bbar">
+                        <button class="bbarb" onclick="opb('https://discord.com/channels/@me')">Discord</button>
+                        <button class="bbarb" onclick="opb('https://youtube.com')">Youtube</button>
+                        <button class="bbarb" onclick="opb('https://Google.com')">Google</button>
+                    </div>
         </center>
 
-        <div class="bbar">
-            <button class="bbarb" onclick="opb('https://discord.com/channels/@me')">Discord</button>
-            <button class="bbarb" onclick="opb('https://youtube.com')">Youtube</button>
-            <button class="bbarb" onclick="opb('https://Google.com')">Google</button>
-        </div>
 
         <style>
             body {
@@ -31,11 +32,10 @@
             }
 
             .bbar {
-                bottom: 0;
-                margin-bottom: 30%;
+                margin-top: 37.7%;
                 left: 0;
                 width: 100%;
-                height: 10%;
+                height: 40%;
                 overflow: hidden;
                 position: fixed;
                 background: rgb(24, 24, 24);
@@ -44,10 +44,9 @@
 
             .bbarb {
                 height: 100%;
-                width: 33%;
+                width: 11%;
                 color: white;
                 background: #2424246b;
-                left: 0;
                 transition: 0.3s;
             }
 
