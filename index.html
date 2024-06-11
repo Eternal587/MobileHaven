@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html>
     <body>
+        <link rel="font-family" href="Roboto-Regular.ttf">
         <center>
-            <h1> Mobile Haven - Hub</h1>
-                <a href="https://discord.com/channels/@me">Discord</a>
-                <a href="https://poki.com">Poki</a>
-                <a href="https://youtube.com">Youtube</a>
-                <a href="google.com">Google</a>
-                <a href="https://open.spotify.com">Spotify</a>
-                <a href="https://github.com">Github</a>
-                <br>
-                <input id="OP"></input>
-                <button onclick="episode()">Refresh episode</button>
-                <a href="https://ww6.gogoanimes.org/watch/one-piece-dub-episode-1" id="episode">One Piece</a>
-                <br>
-                <a href="github.com/VibingCatt/MobileHaven/">Github Source</a>
+            <h1>MobileHaven</h1>
+                    <input type="text" id="Website" class="wwb"></input>
+                    <button class="wwb" onclick="openwebsite()">Open Website</button> <br>
         </center>
+
+        <div class="bbar">
+            <button class="bbarb" onclick="opb('https://discord.com/channels/@me')">Discord</button>
+            <button class="bbarb" onclick="opb('https://youtube.com')">Youtube</button>
+            <button class="bbarb" onclick="opb('https://Google.com')">Google</button>
+        </div>
+
         <style>
             body {
-                background-color: black;
+                background-color: rgb(83, 77, 68);
                 color: white;
                 text-emphasis-color: lightblue;
-                transform: scale(1.3); /* for Firefox, default 1*/
-    zoom:130%; /* For Chrome, IE, default 100%*/
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }      
+
+            .wwb {
+                width: 50%; 
+                height: 10%; 
+                border-radius: 5px;
             }
-            .button {
-                border-radius: 4px;
-                size: 40px
-            }            
+
+            .bbar {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                overflow: hidden;
+                position: fixed;
+                background: rgb(24, 24, 24);
+                color: white;
+            }
+
+            .bbarb {
+                height: 100%;
+                width: 33%;
+                color: white;
+                background: #2424246b;
+                left: 0;
+                transition: 0.3s;
+            }
+
+            .bbarb:hover {
+                background: #b6b6b66b;
+            }
         </style>
     </body>
     <script>
-        /// Variables
-
-    let x = document.getElementById("OP").value;
-    let y = String("https://ww6.gogoanimes.org/watch/one-piece-dub-episode-" + x);
-
-        /// functions
-        function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-        function episode() {
-            let x = document.getElementById("OP").value;
-            let y = String("https://ww6.gogoanimes.org/watch/one-piece-dub-episode-" + x);
-            let z = document.getElementById('episode')
-            z.setAttribute("href", y);
+        function openwebsite() {
+            let x = document.getElementById("Website").value
+            window.open(x)
         }
 
-
-
+        function opb(link) {
+            window.open(link);
+        }
     </script>
 </html>
